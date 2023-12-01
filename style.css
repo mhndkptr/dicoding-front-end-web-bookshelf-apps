@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F4EEE0;
+    color: #4F4557;
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    background-color: #4F4557;
+    color: #F4EEE0;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+header .title h1 {
+    font-size: 1.8rem;
+    text-shadow: 1px 0px 1px rgb(231, 231, 231);
+}
+
+main {
+    width: 65%;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.inputBookSection {
+    border: 1px solid #4F4557;
+    border-radius: 1.5rem;
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    transition: 300ms;
+}
+
+.inputBookSection h2 {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.inputBookSection .input {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputBookSection .input input,
+.searchSection form input {
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 1px solid #4F4557;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+
+.inputBookSection .input label,
+.inputBookSection .inputCheckbox label,
+.searchSection form label {
+    font-size: 1.2rem;
+}
+
+.inputBookSection .input input:focus,
+.searchSection form input:focus {
+    outline: none;
+}
+
+.inputBookSection .inputCheckbox {
+    display: flex;
+    gap: .6rem;
+}
+
+.inputBookSection .inputCheckbox input:hover {
+    cursor: pointer;
+}
+
+#inputBook {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.inputBookSection #bookSubmit,
+#searchSubmit {
+    width: 100%;
+    padding: .5rem;
+    border-radius: .5rem;
+    background-color: #F4EEE0;
+    color: #4F4557;
+    border: 1px solid #4F4557;
+    font-size: 1.2rem;
+    transition: 200ms;
+    font-family: 'Lato', sans-serif;
+}
+
+.inputBookSection #bookSubmit:hover,
+#searchSubmit:hover {
+    cursor: pointer;
+    background-color: #4F4557;
+    color: #F4EEE0;
+}
+
+.searchSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .7rem;
+}
+
+.searchSection .bookList {
+    width: 100%;
+}
+
+.searchSection form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.searchSection form button {
+    flex-basis: 30%;
+}
+
+.searchSection form input {
+    flex-basis: 65%;
+}
+
+.bookShelf,
+.searchSection {
+    border: 1px solid #4F4557;
+    padding: 1.4rem;
+    border-radius: 1.5rem;
+    transition: 300ms;
+}
+
+.bookShelf h2,
+.searchSection h2 {
+    color: #4F4557;
+    font-size: 1.5rem;
+}
+
+.bookList {
+    padding: 16px;
+    transition: 300ms;
+}
+
+.bookList .bookItem {
+    padding: 8px 16px 16px 16px;
+    border: 1px solid #4F4557;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.bookList .bookItem h3, p {
+    margin: 8px 0;
+}
+
+.bookList .bookItem .action button {
+    border: 0;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bookList .bookItem .action .green {
+    background-color: green;
+    color: white;
+    transition: 300ms;
+}
+
+.bookList .bookItem .action .red {
+    background-color: red;
+    color: white;
+    transition: 300ms;
+}
+
+.bookList .bookItem .action .green:hover,
+.bookList .bookItem .action .red:hover {
+    filter: grayscale(40%);
+}
+
+.notify {
+    position: absolute;
+    top: 20px;
+    right: -15rem;
+    z-index: 999;
+    border-radius: .5rem;
+    opacity: 0;
+    transition: 300ms;
+    padding: .5rem 1rem;
+}
+
+.notify p {
+    font-size: 1rem;
+}
+
+.notify.active {
+    opacity: 100;
+}
+
+@media screen and (max-width: 1400px) {
+    .notify {
+        right: -13rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 90%;
+    }
+    
+    main {
+        width: 75%;
+    }
+
+    .notify {
+        right: -5rem;
+    }
+
+    .searchSection form {
+        gap: .5rem;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 85%;
+    }
+
+    main {
+        width: 87.5%;
+    }
+
+    .notify {
+        right: 0;
+    }
+
+    .searchSection form {
+        gap: .3;
+    }
+}
